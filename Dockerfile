@@ -4,6 +4,16 @@ RUN	conda update conda && \
 	conda upgrade --all -y && \
 	apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get -y upgrade && \
+	DEBIAN_FRONTEND=noninteractive apt-get -y install \
+	python3-pyqt5 \
+        libcanberra-gtk-module \
+        packagekit-gtk3-module \
+        fonts-liberation \
+        libnspr4 \
+        libnss3 \
+        libxss1 \
+        xdg-utils \
+        libgbm1 && \
 	DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && \
 	DEBIAN_FRONTEND=noninteractive apt-get -y clean autoclean
 
