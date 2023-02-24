@@ -7,13 +7,14 @@ RUN	conda update conda && \
 	DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && \
 	DEBIAN_FRONTEND=noninteractive apt-get -y clean autoclean
 
-RUN	cd /opt && \
+RUN eval "$(/opt/conda/bin/conda shell.bash hook)" && \
+	cd /opt && \
 	git clone https://github.com/DiamondLightSource/Savu.git && \
 	cd Savu && \
-	conda create -y --name o2r_savu --file install/savu_lite37/spec-savu_lite_latest.txt && \
+	conda create --name o2r_savu --file install/savu_lite37/spec-savu_lite_latest.txt && \
 	conda activate o2r_savu && \
-	python setup.py install && \
+	python3 setup.py install && \
 	cd .. && \
 	git clone -b savu-lite https://github.com/rosalindfranklininstitute/Ot2Rec.git && \
 	cd Ot2Rec && \
-	pip install -e .
+	python3 -m pip install -e .
