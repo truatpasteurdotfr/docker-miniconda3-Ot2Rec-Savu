@@ -10,7 +10,7 @@ RUN	conda update conda && \
 RUN	cd /opt && \
 	git clone https://github.com/DiamondLightSource/Savu.git && \
 	cd Savu && \
-	conda create --name o2r_savu --file install/savu_lite37/spec-savu_lite_latest.txt && \
+	conda create -y --name o2r_savu --file install/savu_lite37/spec-savu_lite_latest.txt && \
 	conda activate o2r_savu && \
 	python setup.py install && \
 	cd .. && \
