@@ -1,3 +1,6 @@
+[![Docker build](https://github.com/truatpasteurdotfr/docker-miniconda3-Ot2Rec-Savu/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/truatpasteurdotfr/docker-miniconda3-Ot2Rec-Savu/actions/workflows/docker-publish.yml)
+
+
 ## installing a Ot2Rec/Savu docker image (https://github.com/rosalindfranklininstitute/Ot2Rec/issues/88)
 
 CI produced registry image at ghcr.io/truatpasteurdotfr/docker-miniconda3-Ot2Rec-Savu
